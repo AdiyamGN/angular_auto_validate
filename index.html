@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="formvalidation">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Form Validation</title>
+
+	<!-- Bootstrap style -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- google font -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+	<!--Custom Style -->
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">Form Validation - Angular Auto Validate</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container main-content" ng-controller="FormValidationController">
+
+		<form> 
+
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" 
+							 class="form-control" 
+							 ng-model="formModel.name"
+							 id="name">
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" 
+							 class="form-control"
+							 ng-model="formModel.email" 
+							 id="email"
+							 required="required"
+							 name="email">
+			</div>
+
+			<div class="form-group">
+				<label for="text">User Name</label>
+				<input type="text"
+							 class="form-control"
+							 ng-model="formModel.username"
+							 id="username">
+			</div>
+
+			<div class="form-group">
+				<label for="text">Age</label>
+				<input type="number"
+							 class="form-control"
+							 ng-model="formModel.age"
+							 id="age">
+			</div>
+
+			<div class="form-group">
+				<label for="sex">Sex</label>
+				<select id="sex"
+								class="form-control"
+								ng-model="formModel.sex">
+					<option value="">Please Choose</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" 
+							 class="form-control"
+							 ng-model="formModel.password" 
+							 id="password">
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-primary">Register</button>
+			</div>
+
+		</form>
+
+		<pre> {{ theForm | json }} </pre>
+
+	</div>
+
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/form_validation_controller.js"></script>
+</body>
+</html>
