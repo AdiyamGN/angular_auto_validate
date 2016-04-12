@@ -23,8 +23,10 @@
 		function AutoValidateController() {
 			var vm = this;
 			vm.formModel = {};
+			vm.submitting = false;
 
 			vm.onSubmit = function() {
+				vm.submitting = true;
 				console.log('Hey, I am submitted.');
 				console.log(vm.formModel);
 			}
