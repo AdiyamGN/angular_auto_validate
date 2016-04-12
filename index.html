@@ -54,6 +54,7 @@
 							 ng-pattern="/^[A-Za-z0-9_]{1,32}$/"
 							 ng-minlength="7"
 							 required="required"
+							 ng-pattern-err-type="badUsername"
 							 id="username">
 			</div>
 
@@ -65,6 +66,8 @@
 							 min="18"
 							 max="64" 
 							 required="required"
+							 ng-min-err-type="tooYoung"
+							 ng-max-err-type="tooOld"
 							 id="age">
 			</div>
 
